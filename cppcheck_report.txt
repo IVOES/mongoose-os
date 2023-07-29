@@ -1,0 +1,1778 @@
+fw/examples/c_mqtt/src/main.c:127:18: style: Local variable 'i' shadows outer variable [shadowVariable]
+        for (int i = 0; i < t.len; i += 2, j++) {
+                 ^
+fw/examples/c_mqtt/src/main.c:77:9: note: Shadowed declaration
+    int i, pin, state, addr, len;
+        ^
+fw/examples/c_mqtt/src/main.c:127:18: note: Shadow variable
+        for (int i = 0; i < t.len; i += 2, j++) {
+                 ^
+platforms/cc3200/boot/src/relocator.c:27:31: error: Subtracting pointers that point to different objects [comparePointers]
+  uint32_t len = (&_bss_start - &_text_start);
+                              ^
+platforms/cc3200/boot/src/relocator.c:22:17: note: Variable declared here.
+extern uint32_t _bss_start;  /* Symbol at the end of area to copy */
+                ^
+platforms/cc3200/boot/src/relocator.c:27:19: note: Address of variable taken here.
+  uint32_t len = (&_bss_start - &_text_start);
+                  ^
+platforms/cc3200/boot/src/relocator.c:21:17: note: Variable declared here.
+extern uint32_t _text_start; /* Destination address to copy to. */
+                ^
+platforms/cc3200/boot/src/relocator.c:27:33: note: Address of variable taken here.
+  uint32_t len = (&_bss_start - &_text_start);
+                                ^
+platforms/cc3200/boot/src/relocator.c:27:31: note: Subtracting pointers that point to different objects
+  uint32_t len = (&_bss_start - &_text_start);
+                              ^
+platforms/cc3200/boot/src/startup_gcc.c:28:16: error: Comparing pointers that point to different objects [comparePointers]
+  while (start < end) *start++ = 0;
+               ^
+platforms/cc3200/boot/src/startup_gcc.c:22:17: note: Variable declared here.
+extern uint32_t _bss_start;
+                ^
+platforms/cc3200/boot/src/startup_gcc.c:26:21: note: Address of variable taken here.
+  uint32_t *start = &_bss_start;
+                    ^
+platforms/cc3200/boot/src/startup_gcc.c:23:17: note: Variable declared here.
+extern uint32_t _bss_end;
+                ^
+platforms/cc3200/boot/src/startup_gcc.c:27:19: note: Address of variable taken here.
+  uint32_t *end = &_bss_end;
+                  ^
+platforms/cc3200/boot/src/startup_gcc.c:28:16: note: Comparing pointers that point to different objects
+  while (start < end) *start++ = 0;
+               ^
+platforms/cc3200/tools/startup_gcc.c:223:39: error: Comparing pointers that point to different objects [comparePointers]
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+                                      ^
+platforms/cc3200/tools/startup_gcc.c:198:17: note: Variable declared here.
+extern uint32_t _data;
+                ^
+platforms/cc3200/tools/startup_gcc.c:223:21: note: Address of variable taken here.
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+                    ^
+platforms/cc3200/tools/startup_gcc.c:199:17: note: Variable declared here.
+extern uint32_t _edata;
+                ^
+platforms/cc3200/tools/startup_gcc.c:223:41: note: Address of variable taken here.
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+                                        ^
+platforms/cc3200/tools/startup_gcc.c:223:39: note: Comparing pointers that point to different objects
+    for(pui32Dest = &_data; pui32Dest < &_edata; )
+                                      ^
+platforms/cc32xx/src/cc32xx_hal.c:92:28: error: Subtracting pointers that point to different objects [comparePointers]
+  return ((char *) &_eheap - (char *) &_heap);
+                           ^
+platforms/cc32xx/src/cc32xx_hal.c:87:22: note: Variable declared here.
+extern unsigned long _eheap;
+                     ^
+platforms/cc32xx/src/cc32xx_hal.c:92:20: note: Address of variable taken here.
+  return ((char *) &_eheap - (char *) &_heap);
+                   ^
+platforms/cc32xx/src/cc32xx_hal.c:86:22: note: Variable declared here.
+extern unsigned long _heap;
+                     ^
+platforms/cc32xx/src/cc32xx_hal.c:92:39: note: Address of variable taken here.
+  return ((char *) &_eheap - (char *) &_heap);
+                                      ^
+platforms/cc32xx/src/cc32xx_hal.c:92:28: note: Subtracting pointers that point to different objects
+  return ((char *) &_eheap - (char *) &_heap);
+                           ^
+platforms/cc32xx/src/cc32xx_hw_timers.c:67:55: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+  MAP_TimerConfigure(base, (flags & MGOS_TIMER_REPEAT ? TIMER_CFG_PERIODIC
+                                                      ^
+platforms/cc32xx/src/cc32xx_main.c:110:46: error: Subtracting pointers that point to different objects [comparePointers]
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/cc32xx/src/cc32xx_main.c:100:47: note: Variable declared here.
+__attribute__((section(".bss_end"))) uint32_t _bss_end;
+                                              ^
+platforms/cc32xx/src/cc32xx_main.c:110:36: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                   ^
+platforms/cc32xx/src/cc32xx_main.c:99:49: note: Variable declared here.
+__attribute__((section(".bss_start"))) uint32_t _bss_start;
+                                                ^
+platforms/cc32xx/src/cc32xx_main.c:110:57: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                                        ^
+platforms/cc32xx/src/cc32xx_main.c:110:46: note: Subtracting pointers that point to different objects
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/cc32xx/src/cc32xx_main.c:113:40: error: Subtracting pointers that point to different objects [comparePointers]
+  memset(UMM_MALLOC_CFG__HEAP_ADDR, 0, UMM_MALLOC_CFG__HEAP_SIZE);
+                                       ^
+platforms/cc32xx/src/cc32xx_main.c:97:48: note: Variable declared here.
+__attribute__((section(".heap_end"))) uint32_t _heap_end;
+                                               ^
+platforms/cc32xx/src/cc32xx_main.c:113:40: note: Address of variable taken here.
+  memset(UMM_MALLOC_CFG__HEAP_ADDR, 0, UMM_MALLOC_CFG__HEAP_SIZE);
+                                       ^
+platforms/cc32xx/src/cc32xx_main.c:96:50: note: Variable declared here.
+__attribute__((section(".heap_start"))) uint32_t _heap_start;
+                                                 ^
+platforms/cc32xx/src/cc32xx_main.c:113:40: note: Address of variable taken here.
+  memset(UMM_MALLOC_CFG__HEAP_ADDR, 0, UMM_MALLOC_CFG__HEAP_SIZE);
+                                       ^
+platforms/cc32xx/src/cc32xx_main.c:113:40: note: Subtracting pointers that point to different objects
+  memset(UMM_MALLOC_CFG__HEAP_ADDR, 0, UMM_MALLOC_CFG__HEAP_SIZE);
+                                       ^
+platforms/esp32/main/esp32_uart.c:205:32: style: Local variable 'uds' shadows outer variable [shadowVariable]
+      struct esp32_uart_state *uds = (struct esp32_uart_state *) us->dev_data;
+                               ^
+platforms/esp32/main/esp32_uart.c:173:28: note: Shadowed declaration
+  struct esp32_uart_state *uds = (struct esp32_uart_state *) us->dev_data;
+                           ^
+platforms/esp32/main/esp32_uart.c:205:32: note: Shadow variable
+      struct esp32_uart_state *uds = (struct esp32_uart_state *) us->dev_data;
+                               ^
+platforms/esp32c3/main/esp32c3_uart.c:147:34: style: Local variable 'uds' shadows outer variable [shadowVariable]
+      struct esp32c3_uart_state *uds =
+                                 ^
+platforms/esp32c3/main/esp32c3_uart.c:115:30: note: Shadowed declaration
+  struct esp32c3_uart_state *uds = (struct esp32c3_uart_state *) us->dev_data;
+                             ^
+platforms/esp32c3/main/esp32c3_uart.c:147:34: note: Shadow variable
+      struct esp32c3_uart_state *uds =
+                                 ^
+platforms/esp8266/rboot/esptool2/esptool2.c:228:3: warning:inconclusive: The buffer 'name' may not be null-terminated after the call to strncpy(). [terminateStrncpy]
+  strncpy(name, sect->name, 31);
+  ^
+platforms/esp8266/rboot/esptool2/esptool2.c:236:3: warning: %d in format string (no. 4) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(outfile, "\r\nconst uint32 %s_addr = 0x%08x;\r\nconst uint32 %s_len = %d;\r\nconst uint8  %s_data[] = {",
+  ^
+platforms/esp8266/rboot/esptool2/esptool2.c:57:13: style: The scope of the variable 'args' can be reduced. [variableScope]
+    va_list args;
+            ^
+platforms/esp8266/rboot/esptool2/esptool2.c:68:13: style: The scope of the variable 'args' can be reduced. [variableScope]
+    va_list args;
+            ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:31:42: style:inconclusive: Function 'GetElfSection' argument 1 names different: declaration 'e_object' definition 'elf'. [funcArgNamesDifferent]
+MyElf_Section* GetElfSection(MyElf_File *elf, char *name) {
+                                         ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.h:45:42: note: Function 'GetElfSection' argument 1 names different: declaration 'e_object' definition 'elf'.
+MyElf_Section* GetElfSection(MyElf_File *e_object, char *name);
+                                         ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:31:42: note: Function 'GetElfSection' argument 1 names different: declaration 'e_object' definition 'elf'.
+MyElf_Section* GetElfSection(MyElf_File *elf, char *name) {
+                                         ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:50:46: style:inconclusive: Function 'GetElfSectionData' argument 1 names different: declaration 'e_object' definition 'elf'. [funcArgNamesDifferent]
+unsigned char* GetElfSectionData(MyElf_File *elf, MyElf_Section *section) {
+                                             ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.h:46:46: note: Function 'GetElfSectionData' argument 1 names different: declaration 'e_object' definition 'elf'.
+unsigned char* GetElfSectionData(MyElf_File *e_object, MyElf_Section *section);
+                                             ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:50:46: note: Function 'GetElfSectionData' argument 1 names different: declaration 'e_object' definition 'elf'.
+unsigned char* GetElfSectionData(MyElf_File *elf, MyElf_Section *section) {
+                                             ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:175:28: style:inconclusive: Function 'UnloadElf' argument 1 names different: declaration 'e_object' definition 'elf'. [funcArgNamesDifferent]
+void UnloadElf(MyElf_File *elf) {
+                           ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.h:44:28: note: Function 'UnloadElf' argument 1 names different: declaration 'e_object' definition 'elf'.
+void UnloadElf(MyElf_File *e_object);
+                           ^
+platforms/esp8266/rboot/esptool2/esptool2_elf.c:175:28: note: Function 'UnloadElf' argument 1 names different: declaration 'e_object' definition 'elf'.
+void UnloadElf(MyElf_File *elf) {
+                           ^
+platforms/esp8266/rboot/rboot/appcode/rboot-api.c:43:18: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+ uint32_t buffer[sizeof(*conf) / sizeof(uint32_t) + 1];
+                 ^
+platforms/esp8266/rboot/rboot/rboot-stage2a.c:58:2: portability: Returning an integer in a function with pointer return type is not portable. [CastIntegerToAddressAtReturn]
+ return usercode;
+ ^
+platforms/esp8266/rboot/rboot/rboot-stage2a.c:18:9: style: The scope of the variable 'writepos' can be reduced. [variableScope]
+ uint8 *writepos;
+        ^
+platforms/esp8266/rboot/rboot/rboot-stage2a.c:19:9: style: The scope of the variable 'remaining' can be reduced. [variableScope]
+ uint32 remaining;
+        ^
+platforms/esp8266/rboot/rboot/rboot-stage2a.c:20:12: style: Unused variable: usercode [unusedVariable]
+ usercode* usercode;
+           ^
+platforms/esp8266/rboot/rboot/rboot.c:216:9: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+ } else if (flag == 2) {
+        ^
+platforms/esp8266/rboot/rboot/rboot.c:219:4: note: Found duplicate branches for 'if' and 'else'.
+ } else {
+   ^
+platforms/esp8266/rboot/rboot/rboot.c:216:9: note: Found duplicate branches for 'if' and 'else'.
+ } else if (flag == 2) {
+        ^
+platforms/esp8266/rboot/rboot/rboot.c:78:12: style: Variable 'writepos' is assigned a value that is never used. [unreadVariable]
+  writepos = section->address;
+           ^
+platforms/esp8266/rboot/rboot/rboot.c:90:13: style: Variable 'writepos' is assigned a value that is never used. [unreadVariable]
+   writepos += readlen;
+            ^
+platforms/esp8266/rboot/rboot/rboot.c:212:13: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+  flashsize = 0x80000;
+            ^
+platforms/esp8266/rboot/rboot/rboot.c:215:13: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+  flashsize = 0x40000;
+            ^
+platforms/esp8266/rboot/rboot/rboot.c:218:13: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+  flashsize = 0x100000;
+            ^
+platforms/esp8266/rboot/rboot/rboot.c:239:13: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+  flashsize = 0x100000; // limit to 8Mbit
+            ^
+platforms/esp8266/rboot/rboot/rboot.c:223:14: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+   flashsize = 0x200000;
+             ^
+platforms/esp8266/rboot/rboot/rboot.c:226:14: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+   flashsize = 0x400000;
+             ^
+platforms/esp8266/rboot/rboot/rboot.c:229:14: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+   flashsize = 0x800000;
+             ^
+platforms/esp8266/rboot/rboot/rboot.c:232:14: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+   flashsize = 0x1000000;
+             ^
+platforms/esp8266/rboot/rboot/rboot.c:235:14: style: Variable 'flashsize' is assigned a value that is never used. [unreadVariable]
+   flashsize = 0x100000;  // assume 8Mbit
+             ^
+platforms/esp8266/rboot/rboot/rboot.c:401:11: style: The scope of the variable 'loader' can be reduced. [variableScope]
+ stage2a *loader;
+          ^
+platforms/esp8266/src/esp_debug.c:44:7: warning: %lu in format string (no. 1) requires 'unsigned long *' but the argument type is 'unsigned int *'. [invalidScanfArgType_int]
+  if (sscanf(dst, "%lu.%lu.%lu.%lu:%lu", &ip1, &ip2, &ip3, &ip4, &port) != 5) {
+      ^
+platforms/esp8266/src/esp_debug.c:44:7: warning: %lu in format string (no. 2) requires 'unsigned long *' but the argument type is 'unsigned int *'. [invalidScanfArgType_int]
+  if (sscanf(dst, "%lu.%lu.%lu.%lu:%lu", &ip1, &ip2, &ip3, &ip4, &port) != 5) {
+      ^
+platforms/esp8266/src/esp_debug.c:44:7: warning: %lu in format string (no. 3) requires 'unsigned long *' but the argument type is 'unsigned int *'. [invalidScanfArgType_int]
+  if (sscanf(dst, "%lu.%lu.%lu.%lu:%lu", &ip1, &ip2, &ip3, &ip4, &port) != 5) {
+      ^
+platforms/esp8266/src/esp_debug.c:44:7: warning: %lu in format string (no. 4) requires 'unsigned long *' but the argument type is 'unsigned int *'. [invalidScanfArgType_int]
+  if (sscanf(dst, "%lu.%lu.%lu.%lu:%lu", &ip1, &ip2, &ip3, &ip4, &port) != 5) {
+      ^
+platforms/esp8266/src/esp_debug.c:44:7: warning: %lu in format string (no. 5) requires 'unsigned long *' but the argument type is 'unsigned int *'. [invalidScanfArgType_int]
+  if (sscanf(dst, "%lu.%lu.%lu.%lu:%lu", &ip1, &ip2, &ip3, &ip4, &port) != 5) {
+      ^
+platforms/esp8266/src/esp_exc.c:93:13: portability: %d in format string (no. 2) requires 'int' but the argument type is 'intptr_t {aka signed long}'. [invalidPrintfArgType_sint]
+    int l = snprintf(buf, buf_len - 1, "%s %d:%#08lx", buf,
+            ^
+platforms/esp8266/src/esp_exc.c:93:13: warning: %lx in format string (no. 3) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    int l = snprintf(buf, buf_len - 1, "%s %d:%#08lx", buf,
+            ^
+platforms/esp8266/src/esp_exc.c:93:56: error: Undefined behavior: Variable 'buf' is used as parameter and destination in snprintf(). [sprintfOverlappingData]
+    int l = snprintf(buf, buf_len - 1, "%s %d:%#08lx", buf,
+                                                       ^
+platforms/esp8266/src/esp_exc_non_os.c:86:7: style: The scope of the variable 'pc_inc' can be reduced. [variableScope]
+  int pc_inc = 0;
+      ^
+platforms/esp8266/src/esp_exc_non_os.c:86:14: style: Variable 'pc_inc' is assigned a value that is never used. [unreadVariable]
+  int pc_inc = 0;
+             ^
+platforms/esp8266/src/esp_gpio.c:230:51: style:inconclusive: Boolean expression 'level' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+    WRITE_PERI_REG(RTC_GPIO_OUT, (v & 0xfffffffe) | level);
+                                                  ^
+platforms/esp8266/src/esp_hal.c:80:12: style: The scope of the variable 'prev_ps' can be reduced. [variableScope]
+  uint32_t prev_ps;
+           ^
+platforms/esp8266/src/esp_hw_wdt.c:67:19: style: Condition 'secs<1' is always false [knownConditionTrueFalse]
+  } else if (secs < 1) {
+                  ^
+platforms/esp8266/src/esp_hw_wdt.c:65:12: note: Assuming that condition 'secs<=0' is not redundant
+  if (secs <= 0) {
+           ^
+platforms/esp8266/src/esp_hw_wdt.c:67:19: note: Condition 'secs<1' is always false
+  } else if (secs < 1) {
+                  ^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'CS_MMAP;FW_RF_CAL_DATA_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'FW_RF_CAL_DATA_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'FW_RF_CAL_DATA_ADDR;FW_SYS_PARAMS_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'MGOS_ABORT_ON_STACK_OVERFLOW;FW_RF_CAL_DATA_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'MGOS_HAVE_ADC;FW_RF_CAL_DATA_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/esp8266/src/esp_main.c:336:0: information: Skipping configuration 'MGOS_HAVE_OTA_COMMON;FW_RF_CAL_DATA_ADDR' since the value of 'FW_RF_CAL_DATA_ADDR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return FW_RF_CAL_DATA_ADDR / 4096;
+^
+platforms/posix/lnx_gpio.c:282:11: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+      res = read(fdset[i].fd, &val, sizeof(val));
+          ^
+platforms/posix/posix_hal.c:62:0: information: Skipping configuration '_SC_PAGE_SIZE;_SC_PHYS_PAGES' since the value of '_SC_PHYS_PAGES' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return sysconf(_SC_PHYS_PAGES) * sysconf(_SC_PAGESIZE);
+^
+platforms/rs14100/src/rs14100_entry.c:30:46: error: Subtracting pointers that point to different objects [comparePointers]
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/rs14100/src/rs14100_entry.c:25:29: note: Variable declared here.
+extern uint32_t _bss_start, _bss_end;
+                            ^
+platforms/rs14100/src/rs14100_entry.c:30:36: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                   ^
+platforms/rs14100/src/rs14100_entry.c:25:17: note: Variable declared here.
+extern uint32_t _bss_start, _bss_end;
+                ^
+platforms/rs14100/src/rs14100_entry.c:30:57: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                                        ^
+platforms/rs14100/src/rs14100_entry.c:30:46: note: Subtracting pointers that point to different objects
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/rs14100/src/rs14100_entry.c:32:31: error: Subtracting pointers that point to different objects [comparePointers]
+         ((char *) &_data_end - (char *) &_data_start));
+                              ^
+platforms/rs14100/src/rs14100_entry.c:26:30: note: Variable declared here.
+extern uint32_t _data_start, _data_end, _data_flash_start;
+                             ^
+platforms/rs14100/src/rs14100_entry.c:32:20: note: Address of variable taken here.
+         ((char *) &_data_end - (char *) &_data_start));
+                   ^
+platforms/rs14100/src/rs14100_entry.c:26:17: note: Variable declared here.
+extern uint32_t _data_start, _data_end, _data_flash_start;
+                ^
+platforms/rs14100/src/rs14100_entry.c:32:42: note: Address of variable taken here.
+         ((char *) &_data_end - (char *) &_data_start));
+                                         ^
+platforms/rs14100/src/rs14100_entry.c:32:31: note: Subtracting pointers that point to different objects
+         ((char *) &_data_end - (char *) &_data_start));
+                              ^
+platforms/rs14100/src/rs14100_hal.c:81:7: warning: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/rs14100/src/rs14100_hal.c:81:7: warning: %lu in format string (no. 2) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/rs14100/src/rs14100_hal.c:81:7: warning: %lu in format string (no. 3) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/rs14100/src/rs14100_hal.c:81:7: warning: %lu in format string (no. 4) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/rs14100/src/rs14100_hal.c:35:12: style: The scope of the variable 'rnd' can be reduced. [variableScope]
+  uint32_t rnd;
+           ^
+platforms/rs14100/src/rs14100_hal.c:45:14: style: Local variable 'rnd' shadows outer variable [shadowVariable]
+    uint32_t rnd = HWRNG->HWRNG_RAND_NUM_REG;
+             ^
+platforms/rs14100/src/rs14100_hal.c:35:12: note: Shadowed declaration
+  uint32_t rnd;
+           ^
+platforms/rs14100/src/rs14100_hal.c:45:14: note: Shadow variable
+    uint32_t rnd = HWRNG->HWRNG_RAND_NUM_REG;
+             ^
+platforms/rs14100/src/rs14100_libc.c:82:41: error: Subtracting pointers that point to different objects [comparePointers]
+    memset(&_heap_start, 0, (&_heap_end - &_heap_start));
+                                        ^
+platforms/rs14100/src/rs14100_libc.c:76:29: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+                            ^
+platforms/rs14100/src/rs14100_libc.c:82:30: note: Address of variable taken here.
+    memset(&_heap_start, 0, (&_heap_end - &_heap_start));
+                             ^
+platforms/rs14100/src/rs14100_libc.c:76:16: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+               ^
+platforms/rs14100/src/rs14100_libc.c:82:43: note: Address of variable taken here.
+    memset(&_heap_start, 0, (&_heap_end - &_heap_start));
+                                          ^
+platforms/rs14100/src/rs14100_libc.c:82:41: note: Subtracting pointers that point to different objects
+    memset(&_heap_start, 0, (&_heap_end - &_heap_start));
+                                        ^
+platforms/rs14100/src/rs14100_libc.c:87:20: error: Comparing pointers that point to different objects [comparePointers]
+  if (new_heap_end <= &_heap_end) {
+                   ^
+platforms/rs14100/src/rs14100_libc.c:76:16: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+               ^
+platforms/rs14100/src/rs14100_libc.c:83:20: note: Address of variable taken here.
+    cur_heap_end = &_heap_start;
+                   ^
+platforms/rs14100/src/rs14100_libc.c:76:29: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+                            ^
+platforms/rs14100/src/rs14100_libc.c:87:23: note: Address of variable taken here.
+  if (new_heap_end <= &_heap_end) {
+                      ^
+platforms/rs14100/src/rs14100_libc.c:87:20: note: Comparing pointers that point to different objects
+  if (new_heap_end <= &_heap_end) {
+                   ^
+platforms/rs14100/src/rs14100_libc.c:98:21: error: Subtracting pointers that point to different objects [comparePointers]
+  return &_heap_end - &_heap_start;
+                    ^
+platforms/rs14100/src/rs14100_libc.c:76:29: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+                            ^
+platforms/rs14100/src/rs14100_libc.c:98:10: note: Address of variable taken here.
+  return &_heap_end - &_heap_start;
+         ^
+platforms/rs14100/src/rs14100_libc.c:76:16: note: Variable declared here.
+extern uint8_t _heap_start, _heap_end; /* Provided by linker */
+               ^
+platforms/rs14100/src/rs14100_libc.c:98:23: note: Address of variable taken here.
+  return &_heap_end - &_heap_start;
+                      ^
+platforms/rs14100/src/rs14100_libc.c:98:21: note: Subtracting pointers that point to different objects
+  return &_heap_end - &_heap_start;
+                    ^
+platforms/rs14100/src/rs14100_main.c:255:3: style:inconclusive: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+  return 0;
+  ^
+platforms/stm32/src/stm32_entry.c:33:46: error: Subtracting pointers that point to different objects [comparePointers]
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/stm32/src/stm32_entry.c:27:29: note: Variable declared here.
+extern uint32_t _bss_start, _bss_end;
+                            ^
+platforms/stm32/src/stm32_entry.c:33:36: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                   ^
+platforms/stm32/src/stm32_entry.c:27:17: note: Variable declared here.
+extern uint32_t _bss_start, _bss_end;
+                ^
+platforms/stm32/src/stm32_entry.c:33:57: note: Address of variable taken here.
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                                        ^
+platforms/stm32/src/stm32_entry.c:33:46: note: Subtracting pointers that point to different objects
+  memset(&_bss_start, 0, ((char *) &_bss_end - (char *) &_bss_start));
+                                             ^
+platforms/stm32/src/stm32_entry.c:35:31: error: Subtracting pointers that point to different objects [comparePointers]
+         ((char *) &_data_end - (char *) &_data_start));
+                              ^
+platforms/stm32/src/stm32_entry.c:28:30: note: Variable declared here.
+extern uint32_t _data_start, _data_end, _data_flash_start;
+                             ^
+platforms/stm32/src/stm32_entry.c:35:20: note: Address of variable taken here.
+         ((char *) &_data_end - (char *) &_data_start));
+                   ^
+platforms/stm32/src/stm32_entry.c:28:17: note: Variable declared here.
+extern uint32_t _data_start, _data_end, _data_flash_start;
+                ^
+platforms/stm32/src/stm32_entry.c:35:42: note: Address of variable taken here.
+         ((char *) &_data_end - (char *) &_data_start));
+                                         ^
+platforms/stm32/src/stm32_entry.c:35:31: note: Subtracting pointers that point to different objects
+         ((char *) &_data_end - (char *) &_data_start));
+                              ^
+platforms/stm32/src/stm32_entry.c:36:48: error: Subtracting pointers that point to different objects [comparePointers]
+  memset(&_heap_start, 0, ((char *) &_heap_end - (char *) &_heap_start));
+                                               ^
+platforms/stm32/src/stm32_entry.c:29:30: note: Variable declared here.
+extern uint32_t _heap_start, _heap_end;
+                             ^
+platforms/stm32/src/stm32_entry.c:36:37: note: Address of variable taken here.
+  memset(&_heap_start, 0, ((char *) &_heap_end - (char *) &_heap_start));
+                                    ^
+platforms/stm32/src/stm32_entry.c:29:17: note: Variable declared here.
+extern uint32_t _heap_start, _heap_end;
+                ^
+platforms/stm32/src/stm32_entry.c:36:59: note: Address of variable taken here.
+  memset(&_heap_start, 0, ((char *) &_heap_end - (char *) &_heap_start));
+                                                          ^
+platforms/stm32/src/stm32_entry.c:36:48: note: Subtracting pointers that point to different objects
+  memset(&_heap_start, 0, ((char *) &_heap_end - (char *) &_heap_start));
+                                               ^
+platforms/stm32/src/stm32_hal.c:196:7: warning: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/stm32/src/stm32_hal.c:196:7: warning: %lu in format string (no. 2) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/stm32/src/stm32_hal.c:196:7: warning: %lu in format string (no. 3) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/stm32/src/stm32_hal.c:196:7: warning: %lu in format string (no. 4) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+      sprintf(dst, "%lu.%lu.%lu.%lu", (a & 0xff), ((a >> 8) & 0xff),
+      ^
+platforms/stm32/src/stm32_uart.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 48 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+platforms/ubuntu/src/rpa_queue.c:201:7: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+      if (queue->terminated) {
+      ^
+platforms/ubuntu/src/rpa_queue.c:203:9: note: Found duplicate branches for 'if' and 'else'.
+      } else {
+        ^
+platforms/ubuntu/src/rpa_queue.c:201:7: note: Found duplicate branches for 'if' and 'else'.
+      if (queue->terminated) {
+      ^
+platforms/ubuntu/src/rpa_queue.c:330:7: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+      if (queue->terminated) {
+      ^
+platforms/ubuntu/src/rpa_queue.c:332:9: note: Found duplicate branches for 'if' and 'else'.
+      } else {
+        ^
+platforms/ubuntu/src/rpa_queue.c:330:7: note: Found duplicate branches for 'if' and 'else'.
+      if (queue->terminated) {
+      ^
+platforms/ubuntu/src/rpa_queue.c:99:37: style:inconclusive: Function 'rpa_queue_create' argument 1 names different: declaration 'queue' definition 'q'. [funcArgNamesDifferent]
+bool rpa_queue_create(rpa_queue_t **q, uint32_t queue_capacity)
+                                    ^
+platforms/ubuntu/src/rpa_queue.h:57:37: note: Function 'rpa_queue_create' argument 1 names different: declaration 'queue' definition 'q'.
+bool rpa_queue_create(rpa_queue_t **queue, uint32_t queue_capacity);
+                                    ^
+platforms/ubuntu/src/rpa_queue.c:99:37: note: Function 'rpa_queue_create' argument 1 names different: declaration 'queue' definition 'q'.
+bool rpa_queue_create(rpa_queue_t **q, uint32_t queue_capacity)
+                                    ^
+platforms/ubuntu/src/rpa_queue.c:248:8: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+    rv = pthread_mutex_unlock(queue->one_big_mutex);
+       ^
+platforms/ubuntu/src/rpa_queue.c:377:8: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+    rv = pthread_mutex_unlock(queue->one_big_mutex);
+       ^
+platforms/ubuntu/src/rpa_queue.c:411:11: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+  if ((rv = pthread_mutex_unlock(queue->one_big_mutex)) != 0) {
+          ^
+platforms/ubuntu/src/rpa_queue.c:431:11: style: Variable 'rv' is assigned a value that is never used. [unreadVariable]
+  if ((rv = pthread_mutex_unlock(queue->one_big_mutex)) != 0) {
+          ^
+platforms/ubuntu/src/rpa_queue.c:48:3: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(stderr, "#%d in %d out %d\t%s\n",
+  ^
+platforms/ubuntu/src/rpa_queue.c:48:3: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(stderr, "#%d in %d out %d\t%s\n",
+  ^
+platforms/ubuntu/src/rpa_queue.c:48:3: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  fprintf(stderr, "#%d in %d out %d\t%s\n",
+  ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 1) requires 'unsigned int *' but the argument type is 'int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 2) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 3) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 4) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 5) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_net.c:44:11: warning: %x in format string (no. 6) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    len = sscanf(buf, "%x:%x:%x:%x:%x:%x", &hex[0], &hex[1], &hex[2], &hex[3],
+          ^
+platforms/ubuntu/src/ubuntu_hal_system.c:200:13: warning: Either the condition '!p' is redundant or there is possible null pointer dereference: p. [nullPointerRedundantCheck]
+    while (*p && (isspace(*p) || *p == ':')) {
+            ^
+platforms/ubuntu/src/ubuntu_hal_system.c:195:21: note: Assuming that condition '!p' is not redundant
+  while (len > 0 && !p) {
+                    ^
+platforms/ubuntu/src/ubuntu_hal_system.c:200:13: note: Null pointer dereference
+    while (*p && (isspace(*p) || *p == ':')) {
+            ^
+platforms/ubuntu/src/ubuntu_hal_system.c:203:16: warning: Either the condition '!p' is redundant or there is possible null pointer dereference: p. [nullPointerRedundantCheck]
+    mhz = atol(p);
+               ^
+platforms/ubuntu/src/ubuntu_hal_system.c:195:21: note: Assuming that condition '!p' is not redundant
+  while (len > 0 && !p) {
+                    ^
+platforms/ubuntu/src/ubuntu_hal_system.c:203:16: note: Null pointer dereference
+    mhz = atol(p);
+               ^
+platforms/ubuntu/src/ubuntu_ipc.c:117:23: style: The scope of the variable 'cmptr' can be reduced. [variableScope]
+      struct cmsghdr *cmptr;
+                      ^
+platforms/ubuntu/src/ubuntu_ipc.c:84:12: style: Checking if unsigned expression '_len' is less than zero. [unsignedLessThanZero]
+  if (_len <= 0) {
+           ^
+platforms/ubuntu/src/ubuntu_ipc.c:157:14: style: Checking if unsigned expression '_len' is less than zero. [unsignedLessThanZero]
+    if (_len <= 0) {
+             ^
+src/arm_exc.c:126:7: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+      sprintf(buf, "IRQ%u", isr_no - 16);
+      ^
+src/common/cs_frbuf.c:90:26: portability: Returning an integer in a function with pointer return type is not portable. [CastIntegerToAddressAtReturn]
+      if (b->fp == NULL) return false;
+                         ^
+src/common/cs_frbuf.c:90:26: error: Memory leak: b [memleak]
+      if (b->fp == NULL) return false;
+                         ^
+src/common/cs_frbuf_test.c:88:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "AAAAA");
+    ^
+src/common/cs_frbuf_test.c:93:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "BBB");
+    ^
+src/common/cs_frbuf_test.c:114:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "BBB");
+    ^
+src/common/cs_frbuf_test.c:115:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "CC");
+    ^
+src/common/cs_frbuf_test.c:134:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "B");
+    ^
+src/common/cs_frbuf_test.c:135:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "CC");
+    ^
+src/common/cs_frbuf_test.c:145:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "B");
+    ^
+src/common/cs_frbuf_test.c:146:5: warning: String literal compared with variable 'NULL'. Did you intend to use strcmp() instead? [literalWithCharPtrCompare]
+    ASSERT_FRBUF_GET(b, "CC");
+    ^
+src/common/cs_varint.c:50:36: warning:inconclusive: Division of result of sizeof() on pointer type. [divideSizeof]
+    if (i == buf_size || i == (8 * sizeof(*num) / 7 + 1)) return false;
+                                   ^
+src/frozen/frozen.c:574:9: warning: snprintf format string requires 0 parameters but 1 is given. [wrongPrintfScanfArgNum]
+        snprintf(buf, sizeof(buf), fmt2, val);
+        ^
+src/frozen/frozen.c:869:49: error: Pointer addition with NULL pointer. [nullPointerArithmetic]
+  char *send = (char *) src + slen, *dend = dst + dlen, *orig_dst = dst, *p;
+                                                ^
+src/frozen/frozen.c:952:67: note: Calling function 'json_unescape', 3rd argument 'NULL' value is 0
+        int unescaped_len = json_unescape(token->ptr, token->len, NULL, 0);
+                                                                  ^
+src/frozen/frozen.c:869:49: note: Null pointer addition
+  char *send = (char *) src + slen, *dend = dst + dlen, *orig_dst = dst, *p;
+                                                ^
+src/frozen/frozen.c:573:59: style: Same expression in both branches of ternary operator. [duplicateExpressionTernary]
+        const char *fmt2 = fmt[3] == 'u' ? "%" UINT64_FMT : "%" INT64_FMT;
+                                                          ^
+src/frozen/frozen.c:694:45: style: Same expression on both sides of '||' because 'n+1==(int)strlen("%"PRId64)&&strcmp(fmt2,"%"PRId64)==0' and 'n+1==(int)strlen("%"PRIu64)&&strcmp(fmt2,"%"PRIu64)==0' represent the same value. [knownConditionTrueFalse]
+             strcmp(fmt2, "%" PRId64) == 0) ||
+                                            ^
+src/frozen/frozen.c:235:7: style: The scope of the variable 'n' can be reduced. [variableScope]
+  int n, ch = 0, len = 0;
+      ^
+src/frozen/frozen.c:235:18: style: The scope of the variable 'len' can be reduced. [variableScope]
+  int n, ch = 0, len = 0;
+                 ^
+src/frozen/frozen.c:295:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+  int i = 0, current_path_len;
+      ^
+src/frozen/frozen.c:295:14: style: The scope of the variable 'current_path_len' can be reduced. [variableScope]
+  int i = 0, current_path_len;
+             ^
+src/frozen/frozen.c:296:8: style: The scope of the variable 'buf' can be reduced. [variableScope]
+  char buf[20];
+       ^
+src/frozen/frozen.c:970:11: style: The scope of the variable 'i' can be reduced. [variableScope]
+      int i, len = token->len / 2;
+          ^
+src/frozen/frozen.c:438:51: style:inconclusive: Function 'json_escape' argument 2 names different: declaration 'str' definition 'p'. [funcArgNamesDifferent]
+int json_escape(struct json_out *out, const char *p, size_t len) {
+                                                  ^
+src/frozen/frozen.h:243:51: note: Function 'json_escape' argument 2 names different: declaration 'str' definition 'p'.
+int json_escape(struct json_out *out, const char *str, size_t str_len);
+                                                  ^
+src/frozen/frozen.c:438:51: note: Function 'json_escape' argument 2 names different: declaration 'str' definition 'p'.
+int json_escape(struct json_out *out, const char *p, size_t len) {
+                                                  ^
+src/frozen/frozen.c:438:61: style:inconclusive: Function 'json_escape' argument 3 names different: declaration 'str_len' definition 'len'. [funcArgNamesDifferent]
+int json_escape(struct json_out *out, const char *p, size_t len) {
+                                                            ^
+src/frozen/frozen.h:243:63: note: Function 'json_escape' argument 3 names different: declaration 'str_len' definition 'len'.
+int json_escape(struct json_out *out, const char *str, size_t str_len);
+                                                              ^
+src/frozen/frozen.c:438:61: note: Function 'json_escape' argument 3 names different: declaration 'str_len' definition 'len'.
+int json_escape(struct json_out *out, const char *p, size_t len) {
+                                                            ^
+src/frozen/frozen.c:557:65: style:inconclusive: Function 'json_vprintf' argument 3 names different: declaration 'ap' definition 'xap'. [funcArgNamesDifferent]
+int json_vprintf(struct json_out *out, const char *fmt, va_list xap) {
+                                                                ^
+src/frozen/frozen.h:159:62: note: Function 'json_vprintf' argument 3 names different: declaration 'ap' definition 'xap'.
+int json_vprintf(struct json_out *, const char *fmt, va_list ap);
+                                                             ^
+src/frozen/frozen.c:557:65: note: Function 'json_vprintf' argument 3 names different: declaration 'ap' definition 'xap'.
+int json_vprintf(struct json_out *out, const char *fmt, va_list xap) {
+                                                                ^
+src/frozen/frozen.c:847:73: style:inconclusive: Function 'json_scanf_array_elem' argument 4 names different: declaration 'index' definition 'idx'. [funcArgNamesDifferent]
+int json_scanf_array_elem(const char *s, int len, const char *path, int idx,
+                                                                        ^
+src/frozen/frozen.h:227:73: note: Function 'json_scanf_array_elem' argument 4 names different: declaration 'index' definition 'idx'.
+int json_scanf_array_elem(const char *s, int len, const char *path, int index,
+                                                                        ^
+src/frozen/frozen.c:847:73: note: Function 'json_scanf_array_elem' argument 4 names different: declaration 'index' definition 'idx'.
+int json_scanf_array_elem(const char *s, int len, const char *path, int idx,
+                                                                        ^
+src/frozen/frozen.c:1039:29: style:inconclusive: Function 'json_vscanf' argument 1 names different: declaration 'str' definition 's'. [funcArgNamesDifferent]
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) {
+                            ^
+src/frozen/frozen.h:217:29: note: Function 'json_vscanf' argument 1 names different: declaration 'str' definition 's'.
+int json_vscanf(const char *str, int str_len, const char *fmt, va_list ap);
+                            ^
+src/frozen/frozen.c:1039:29: note: Function 'json_vscanf' argument 1 names different: declaration 'str' definition 's'.
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) {
+                            ^
+src/frozen/frozen.c:1039:36: style:inconclusive: Function 'json_vscanf' argument 2 names different: declaration 'str_len' definition 'len'. [funcArgNamesDifferent]
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) {
+                                   ^
+src/frozen/frozen.h:217:38: note: Function 'json_vscanf' argument 2 names different: declaration 'str_len' definition 'len'.
+int json_vscanf(const char *str, int str_len, const char *fmt, va_list ap);
+                                     ^
+src/frozen/frozen.c:1039:36: note: Function 'json_vscanf' argument 2 names different: declaration 'str_len' definition 'len'.
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) {
+                                   ^
+src/frozen/frozen.c:1095:37: style:inconclusive: Function 'json_scanf' argument 2 names different: declaration 'str_len' definition 'len'. [funcArgNamesDifferent]
+int json_scanf(const char *str, int len, const char *fmt, ...) {
+                                    ^
+src/frozen/frozen.h:216:37: note: Function 'json_scanf' argument 2 names different: declaration 'str_len' definition 'len'.
+int json_scanf(const char *str, int str_len, const char *fmt, ...);
+                                    ^
+src/frozen/frozen.c:1095:37: note: Function 'json_scanf' argument 2 names different: declaration 'str_len' definition 'len'.
+int json_scanf(const char *str, int len, const char *fmt, ...) {
+                                    ^
+src/frozen/frozen.c:1128:30: style:inconclusive: Function 'json_fread' argument 1 names different: declaration 'file_name' definition 'path'. [funcArgNamesDifferent]
+char *json_fread(const char *path) {
+                             ^
+src/frozen/frozen.h:249:30: note: Function 'json_fread' argument 1 names different: declaration 'file_name' definition 'path'.
+char *json_fread(const char *file_name);
+                             ^
+src/frozen/frozen.c:1128:30: note: Function 'json_fread' argument 1 names different: declaration 'file_name' definition 'path'.
+char *json_fread(const char *path) {
+                             ^
+src/frozen/frozen.c:940:15: style: union member 'Anonymous3::p' is never used. [unusedStructMember]
+        void *p;
+              ^
+src/frozen/frozen.c:561:3: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+  va_copy(ap, xap);
+  ^
+src/frozen/frozen.c:572:30: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        int64_t val = va_arg(ap, int64_t);
+                             ^
+src/frozen/frozen.c:578:29: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        size_t val = va_arg(ap, size_t);
+                            ^
+src/frozen/frozen.c:583:43: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        json_printf_callback_t f = va_arg(ap, json_printf_callback_t);
+                                          ^
+src/frozen/frozen.c:584:24: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        len += f(out, &ap);
+                       ^
+src/frozen/frozen.c:586:26: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        int val = va_arg(ap, int);
+                         ^
+src/frozen/frozen.c:592:27: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        int i, n = va_arg(ap, int);
+                          ^
+src/frozen/frozen.c:593:41: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        const unsigned char *p = va_arg(ap, const unsigned char *);
+                                        ^
+src/frozen/frozen.c:603:41: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        const unsigned char *p = va_arg(ap, const unsigned char *);
+                                        ^
+src/frozen/frozen.c:604:24: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        int n = va_arg(ap, int);
+                       ^
+src/frozen/frozen.c:615:31: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+          l = (size_t) va_arg(ap, int);
+                              ^
+src/frozen/frozen.c:618:20: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        p = va_arg(ap, char *);
+                   ^
+src/frozen/frozen.c:653:9: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+        va_copy(ap_copy, ap);
+        ^
+src/frozen/frozen.c:677:13: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+            va_copy(ap_copy, ap);
+            ^
+src/frozen/frozen.c:697:25: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+          (void) va_arg(ap, int64_t);
+                        ^
+src/frozen/frozen.c:699:25: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+          (void) va_arg(ap, int);
+                        ^
+src/frozen/frozen.c:700:25: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+          (void) va_arg(ap, char *);
+                        ^
+src/frozen/frozen.c:705:29: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+              (void) va_arg(ap, int);
+                            ^
+src/frozen/frozen.c:744:3: error: va_list 'ap' used before va_start() was called. [va_list_usedBeforeStarted]
+  va_end(ap);
+  ^
+src/frozen/frozen.c:653:9: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+        va_copy(ap_copy, ap);
+        ^
+src/frozen/frozen.c:654:48: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+        need_len = vsnprintf(pbuf, size, fmt2, ap_copy);
+                                               ^
+src/frozen/frozen.c:655:9: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+        va_end(ap_copy);
+        ^
+src/frozen/frozen.c:677:13: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+            va_copy(ap_copy, ap);
+            ^
+src/frozen/frozen.c:678:49: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+            vsnprintf(pbuf, need_len + 1, fmt2, ap_copy);
+                                                ^
+src/frozen/frozen.c:679:13: error: va_list 'ap_copy' used before va_start() was called. [va_list_usedBeforeStarted]
+            va_end(ap_copy);
+            ^
+src/frozen/frozen.c:437:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_escape(struct json_out *out, const char *p, size_t len) WEAK;
+^
+src/frozen/frozen.c:466:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printer_buf(struct json_out *out, const char *buf, size_t len) WEAK;
+^
+src/frozen/frozen.c:480:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printer_file(struct json_out *out, const char *buf, size_t len) WEAK;
+^
+src/frozen/frozen.c:556:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vprintf(struct json_out *out, const char *fmt, va_list xap) WEAK;
+^
+src/frozen/frozen.c:749:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printf(struct json_out *out, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:759:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printf_array(struct json_out *out, va_list *ap) WEAK;
+^
+src/frozen/frozen.c:809:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+              json_walk_callback_t callback, void *callback_data) WEAK;
+^
+src/frozen/frozen.c:846:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                          struct json_token *token) WEAK;
+^
+src/frozen/frozen.c:867:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_unescape(const char *src, int slen, char *dst, int dlen) WEAK;
+^
+src/frozen/frozen.c:1038:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1094:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_scanf(const char *str, int len, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1104:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vfprintf(const char *file_name, const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1117:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_fprintf(const char *file_name, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1127:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_fread(const char *path) WEAK;
+^
+src/frozen/frozen.c:1208:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+               const char *json_path, const char *json_fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1265:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+              const char *json_path, const char *json_fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1341:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_prettify(const char *s, int len, struct json_out *out) WEAK;
+^
+src/frozen/frozen.c:1347:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_prettify_file(const char *file_name) WEAK;
+^
+src/frozen/frozen.c:1432:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                    struct json_token *key, struct json_token *val) WEAK;
+^
+src/frozen/frozen.c:1439:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                     int *idx, struct json_token *val) WEAK;
+^
+src/frozen/frozen.c:1457:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_vasprintf(const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1466:0: information: Skipping configuration 'WEAK' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_asprintf(const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:437:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_escape(struct json_out *out, const char *p, size_t len) WEAK;
+^
+src/frozen/frozen.c:466:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printer_buf(struct json_out *out, const char *buf, size_t len) WEAK;
+^
+src/frozen/frozen.c:480:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printer_file(struct json_out *out, const char *buf, size_t len) WEAK;
+^
+src/frozen/frozen.c:556:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vprintf(struct json_out *out, const char *fmt, va_list xap) WEAK;
+^
+src/frozen/frozen.c:749:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printf(struct json_out *out, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:759:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_printf_array(struct json_out *out, va_list *ap) WEAK;
+^
+src/frozen/frozen.c:787:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                     va_list ap) WEAK;
+^
+src/frozen/frozen.c:797:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int cs_win_snprintf(char *str, size_t size, const char *format, ...) WEAK;
+^
+src/frozen/frozen.c:809:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+              json_walk_callback_t callback, void *callback_data) WEAK;
+^
+src/frozen/frozen.c:846:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                          struct json_token *token) WEAK;
+^
+src/frozen/frozen.c:867:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_unescape(const char *src, int slen, char *dst, int dlen) WEAK;
+^
+src/frozen/frozen.c:1038:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vscanf(const char *s, int len, const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1094:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_scanf(const char *str, int len, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1104:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_vfprintf(const char *file_name, const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1117:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_fprintf(const char *file_name, const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1127:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_fread(const char *path) WEAK;
+^
+src/frozen/frozen.c:1208:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+               const char *json_path, const char *json_fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1265:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+              const char *json_path, const char *json_fmt, ...) WEAK;
+^
+src/frozen/frozen.c:1341:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_prettify(const char *s, int len, struct json_out *out) WEAK;
+^
+src/frozen/frozen.c:1347:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int json_prettify_file(const char *file_name) WEAK;
+^
+src/frozen/frozen.c:1432:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                    struct json_token *key, struct json_token *val) WEAK;
+^
+src/frozen/frozen.c:1439:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                     int *idx, struct json_token *val) WEAK;
+^
+src/frozen/frozen.c:1457:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_vasprintf(const char *fmt, va_list ap) WEAK;
+^
+src/frozen/frozen.c:1466:0: information: Skipping configuration 'WEAK;_WIN32;__GNUC__;__TI_COMPILER_VERSION__' since the value of 'WEAK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+char *json_asprintf(const char *fmt, ...) WEAK;
+^
+src/frozen/frozen.c:940:15: style: union member 'Anonymous4::p' is never used. [unusedStructMember]
+        void *p;
+              ^
+src/mgos_config_util.c:146:13: portability: Casting between signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+          *((float *) vp) = strtof(tok->ptr, &endptr);
+            ^
+src/mgos_config_util.c:149:13: portability: Casting between signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+          *((double *) vp) = strtod(tok->ptr, &endptr);
+            ^
+src/mgos_config_util.c:291:16: portability: Casting between signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+      return *((float *) vp) == *((float *) bvp);
+               ^
+src/mgos_config_util.c:293:16: portability: Casting between signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+      return *((double *) vp) == *((double *) bvp);
+               ^
+src/mgos_config_util.c:350:44: portability: Casting between const signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+          (e->type == CONF_TYPE_DOUBLE ? *((double *) vp) : *((float *) vp));
+                                           ^
+src/mgos_config_util.c:350:63: portability: Casting between const signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+          (e->type == CONF_TYPE_DOUBLE ? *((double *) vp) : *((float *) vp));
+                                                              ^
+src/mgos_config_util.c:577:14: portability: Casting between signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+    return *((float *) vp);
+             ^
+src/mgos_config_util.c:586:14: portability: Casting between signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+    return *((double *) vp);
+             ^
+src/mgos_config_util.c:335:11: style: Local variable 'len' shadows outer variable [shadowVariable]
+      int len;
+          ^
+src/mgos_config_util.c:322:7: note: Shadowed declaration
+  int len;
+      ^
+src/mgos_config_util.c:335:11: note: Shadow variable
+      int len;
+          ^
+src/mgos_core_dump.c:95:31: error: There is an unknown macro here somewhere. Configuration is required. If CS_STRINGIFY_MACRO is a macro then please configure it. [unknownMacro]
+  mgos_cd_puts("\"arch\": \"" CS_STRINGIFY_MACRO(FW_ARCHITECTURE) "\", ");
+                              ^
+src/mgos_core_dump.c:101:0: information: Skipping configuration 'MGOS_SDK_BUILD_IMAGE' since the value of 'MGOS_SDK_BUILD_IMAGE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      "\"build_image\": \"" CS_STRINGIFY_MACRO(MGOS_SDK_BUILD_IMAGE) "\", ");
+^
+src/mgos_debug.c:62:8: style: Variable 'buf' is not assigned a value. [unassignedVariable]
+  char buf[MGOS_DEBUG_TMP_BUF_SIZE];
+       ^
+src/mgos_event.c:135:50: error: The address of local variable 'ev' is accessed at non-zero index. [objectIndex]
+        ("ev %c%c%c%hhu triggered %d handlers", u[3], u[2], u[1], u[0], count));
+                                                 ^
+src/mgos_event.c:133:36: note: Address of variable taken here.
+    const uint8_t *u = (uint8_t *) &ev;
+                                   ^
+src/mgos_event.c:135:50: note: The address of local variable 'ev' is accessed at non-zero index.
+        ("ev %c%c%c%hhu triggered %d handlers", u[3], u[2], u[1], u[0], count));
+                                                 ^
+src/mgos_event.c:97:9: warning:inconclusive: Possible null pointer dereference: h [nullPointer]
+    if (h->ev == ev && h->group == group && h->cb == cb &&
+        ^
+src/mgos_event.c:95:35: note: Assignment 'h=NULL', assigned value is 0
+  struct handler *ph = NULL, *h = NULL, *th;
+                                  ^
+src/mgos_event.c:97:9: note: Null pointer dereference
+    if (h->ev == ev && h->group == group && h->cb == cb &&
+        ^
+src/mgos_event.c:98:9: warning:inconclusive: Possible null pointer dereference: h [nullPointer]
+        h->userdata == userdata) {
+        ^
+src/mgos_event.c:95:35: note: Assignment 'h=NULL', assigned value is 0
+  struct handler *ph = NULL, *h = NULL, *th;
+                                  ^
+src/mgos_event.c:98:9: note: Null pointer dereference
+        h->userdata == userdata) {
+        ^
+src/mgos_sys_config.c:491:3: error: Common realloc mistake: 's_validators' nulled but not freed upon failure [memleakOnRealloc]
+  s_validators = (mgos_config_validator_fn *) realloc(
+  ^
+src/mgos_sys_config.c:236:0: information: Skipping configuration 'MGOS_CONFIG_DEV_1' since the value of 'MGOS_CONFIG_DEV_1' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(1);
+^
+src/mgos_sys_config.c:239:0: information: Skipping configuration 'MGOS_CONFIG_DEV_2' since the value of 'MGOS_CONFIG_DEV_2' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(2);
+^
+src/mgos_sys_config.c:242:0: information: Skipping configuration 'MGOS_CONFIG_DEV_3' since the value of 'MGOS_CONFIG_DEV_3' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(3);
+^
+src/mgos_sys_config.c:245:0: information: Skipping configuration 'MGOS_CONFIG_DEV_4' since the value of 'MGOS_CONFIG_DEV_4' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(4);
+^
+src/mgos_sys_config.c:248:0: information: Skipping configuration 'MGOS_CONFIG_DEV_5' since the value of 'MGOS_CONFIG_DEV_5' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(5);
+^
+src/mgos_sys_config.c:251:0: information: Skipping configuration 'MGOS_CONFIG_DEV_6' since the value of 'MGOS_CONFIG_DEV_6' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(6);
+^
+src/mgos_sys_config.c:254:0: information: Skipping configuration 'MGOS_CONFIG_DEV_7' since the value of 'MGOS_CONFIG_DEV_7' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(7);
+^
+src/mgos_sys_config.c:257:0: information: Skipping configuration 'MGOS_CONFIG_DEV_8' since the value of 'MGOS_CONFIG_DEV_8' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    PARSE_CONFIG_DEV_LEVEL(8);
+^
+src/mgos_sys_config.c:407:0: information: Skipping configuration 'MGOS_DEBUG_UART' since the value of 'MGOS_DEBUG_UART' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (mgos_sys_config_get_debug_stderr_uart() != MGOS_DEBUG_UART) {
+^
+src/mgos_timers.c:65:16: style: Condition 'min_ti==NULL' is always true [knownConditionTrueFalse]
+    if (min_ti == NULL || ti->next_invocation < min_ti->next_invocation) {
+               ^
+src/mgos_timers.c:63:31: note: Assignment 'min_ti=NULL', assigned value is 0
+  struct timer_info *min_ti = NULL;
+                              ^
+src/mgos_timers.c:65:16: note: Condition 'min_ti==NULL' is always true
+    if (min_ti == NULL || ti->next_invocation < min_ti->next_invocation) {
+               ^
+src/mgos_uart.c:40:0: information: Skipping configuration 'MGOS_MAX_NUM_UARTS' since the value of 'MGOS_MAX_NUM_UARTS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+static struct mgos_uart_state *s_uart_state[MGOS_MAX_NUM_UARTS];
+^
+src/mgos_uart.c:188:0: information: Skipping configuration 'MGOS_MAX_NUM_UARTS' since the value of 'MGOS_MAX_NUM_UARTS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (uart_no < 0 || uart_no >= MGOS_MAX_NUM_UARTS) return false;
+^
+src/mgos_uart.c:228:0: information: Skipping configuration 'MGOS_MAX_NUM_UARTS' since the value of 'MGOS_MAX_NUM_UARTS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (uart_no < 0 || uart_no >= MGOS_MAX_NUM_UARTS) return false;
+^
+src/mgos_uart.c:238:0: information: Skipping configuration 'MGOS_MAX_NUM_UARTS' since the value of 'MGOS_MAX_NUM_UARTS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (uart_no < 0 || uart_no >= MGOS_MAX_NUM_UARTS) return;
+^
+src/status_test.cpp:21:1: error: syntax error [syntaxError]
+TEST(StatusTest, DefaultConstructedOK) {
+^
+src/statusor_test.cpp:38:1: error: syntax error [syntaxError]
+TEST(StatsOrTest, DefaulConstructedUnknown) {
+^
+src/test/test_util.c:35:20: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (i = j = 0; s[i] != '\0' && i < n; i++) {
+                   ^
+src/umm_malloc/test/umm_malloc_test.c:230:10: style: The scope of the variable 'i' can be reduced. [variableScope]
+  size_t i;
+         ^
+src/umm_malloc/umm_malloc.c:1709:7: warning: Redundant assignment of 'ret' to itself. [selfAssignment]
+  ret = GET_POISONED(ret, size);
+      ^
+src/umm_malloc/umm_malloc.c:1737:7: warning: Redundant assignment of 'ret' to itself. [selfAssignment]
+  ret = GET_POISONED(ret, size);
+      ^
+src/umm_malloc/umm_malloc.c:1749:7: warning: Redundant assignment of 'ptr' to itself. [selfAssignment]
+  ptr = GET_UNPOISONED(ptr);
+      ^
+src/umm_malloc/umm_malloc.c:1765:7: warning: Redundant assignment of 'ret' to itself. [selfAssignment]
+  ret = GET_POISONED(ret, size);
+      ^
+src/umm_malloc/umm_malloc.c:1776:7: warning: Redundant assignment of 'ptr' to itself. [selfAssignment]
+  ptr = GET_UNPOISONED(ptr);
+      ^
+src/umm_malloc/umm_malloc.c:1718:38: style:inconclusive: Function 'umm_calloc' argument 2 names different: declaration 'size' definition 'item_size'. [funcArgNamesDifferent]
+void *umm_calloc( size_t num, size_t item_size ) {
+                                     ^
+src/umm_malloc/umm_malloc.h:35:37: note: Function 'umm_calloc' argument 2 names different: declaration 'size' definition 'item_size'.
+void *umm_calloc(size_t num, size_t size);
+                                    ^
+src/umm_malloc/umm_malloc.c:1718:38: note: Function 'umm_calloc' argument 2 names different: declaration 'size' definition 'item_size'.
+void *umm_calloc( size_t num, size_t item_size ) {
+                                     ^
+src/umm_malloc/umm_malloc.c:1317:7: style: Variable 'c' is assigned a value that is never used. [unreadVariable]
+    c = umm_assimilate_down(c, UMM_FREELIST_MASK);
+      ^
+src/umm_malloc/umm_malloc.c:1426:14: style: Condition '0x7FFF!=bestSize' is always false [knownConditionTrueFalse]
+  if( 0x7FFF != bestSize ) {
+             ^
+src/umm_malloc/umm_malloc.c:1405:15: note: Assignment 'bestSize=0x7FFF', assigned value is 32767
+  bestSize  = 0x7FFF;
+              ^
+src/umm_malloc/umm_malloc.c:1426:14: note: Condition '0x7FFF!=bestSize' is always false
+  if( 0x7FFF != bestSize ) {
+             ^
+src/umm_malloc/umm_malloc.c:1297:0: information: Skipping configuration 'UMM_ONFREE' since the value of 'UMM_ONFREE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UMM_ONFREE(ptr, originalBlockSize * sizeof(umm_block) - sizeof(((umm_block *)0)->header));
+^
+src/umm_malloc/umm_malloc.c:1483:0: information: Skipping configuration 'UMM_OOM_CB' since the value of 'UMM_OOM_CB' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UMM_OOM_CB(size, blocks);
+^
+src/status.cpp:79:0: style: The function 'Annotatef' is never used. [unusedFunction]
+
+^
+platforms/cc3220/src/CC3220SF_LAUNCHXL.c:205:0: style: The function 'CC3220SF_LAUNCHXL_initGeneral' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_cache.c:26:0: style: The function 'Cache_Read_Enable_New' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_hal.c:105:0: style: The function 'HAL_GetTick' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:42:0: style: The function 'HAL_I2C_ErrorCallback' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:35:0: style: The function 'HAL_I2C_MasterRxCpltCallback' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:28:0: style: The function 'HAL_I2C_MasterTxCpltCallback' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_main.c:33:0: style: The function 'HAL_InitTick' is never used. [unusedFunction]
+
+^
+src/mgos_system.cpp:29:0: style: The function 'InvokeCB' is never used. [unusedFunction]
+
+^
+src/mgos_json_utils.cpp:29:0: style: The function 'JSONAppendStringf' is never used. [unusedFunction]
+
+^
+src/mgos_json_utils.cpp:40:0: style: The function 'JSONPrintStringf' is never used. [unusedFunction]
+
+^
+platforms/cc3220/src/cc3220_main.c:202:0: style: The function 'PowerCC32XX_enterLPDS' is never used. [unusedFunction]
+
+^
+src/mgos_utils.cpp:24:0: style: The function 'SPrintf' is never used. [unusedFunction]
+
+^
+platforms/cc3220/src/cc3220_hal.c:38:0: style: The function 'SimpleLinkFatalErrorEventHandler' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/src/main.c:185:0: style: The function 'SimpleLinkGeneralEventHandler' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/src/main.c:194:0: style: The function 'SimpleLinkHttpServerCallback' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/src/main.c:198:0: style: The function 'SimpleLinkNetAppEventHandler' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/src/main.c:191:0: style: The function 'SimpleLinkSockEventHandler' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/src/main.c:188:0: style: The function 'SimpleLinkWlanEventHandler' is never used. [unusedFunction]
+
+^
+src/mgos_utils.cpp:62:0: style: The function 'ToString' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_libc.c:66:0: style: The function '__malloc_lock' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_libc.c:71:0: style: The function '__malloc_unlock' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_exc_rtos.c:112:0: style: The function '__wrap_ShowCritical' is never used. [unusedFunction]
+
+^
+src/test/test_util.c:67:0: style: The function '_assert_streq_nz' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:158:0: style: The function '_calloc_r' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:163:0: style: The function '_free_r' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_libc.c:39:0: style: The function '_gettimeofday_r' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:153:0: style: The function '_malloc_r' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:168:0: style: The function '_realloc_r' is never used. [unusedFunction]
+
+^
+platforms/cc3200/tools/startup_gcc.c:326:0: style: The function '_sbrk' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_main.c:108:0: style: The function '_system_pre_init' is never used. [unusedFunction]
+
+^
+platforms/esp32xx/esp32xx_main.c:145:0: style: The function 'app_main' is never used. [unusedFunction]
+
+^
+src/arm_exc.c:76:0: style: The function 'arm_exc_handler_bottom' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_main.c:158:0: style: The function 'assert_failed' is never used. [unusedFunction]
+
+^
+src/test/test_util.c:86:0: style: The function 'c_int_eq' is never used. [unusedFunction]
+
+^
+src/test/test_util.c:82:0: style: The function 'c_int_ne' is never used. [unusedFunction]
+
+^
+src/test/test_util.c:77:0: style: The function 'c_str_ne' is never used. [unusedFunction]
+
+^
+platforms/esp8266/rboot/rboot/rboot-stage2a.c:71:0: style: The function 'call_user_start' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_sl_spawn.c:38:0: style: The function 'cc32xx_sl_spawn' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:329:0: style: The function 'cc32xx_uart_cts' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:339:0: style: The function 'cc32xx_uart_int_mask' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:334:0: style: The function 'cc32xx_uart_raw_ints' is never used. [unusedFunction]
+
+^
+src/common/cs_crc32.c:25:0: style: The function 'cs_crc32' is never used. [unusedFunction]
+
+^
+src/common/cs_file.c:57:0: style: The function 'cs_mmap_file' is never used. [unusedFunction]
+
+^
+src/common/cs_rbuf.c:92:0: style: The function 'cs_rbuf_advance_tail' is never used. [unusedFunction]
+
+^
+src/common/cs_rbuf.c:60:0: style: The function 'cs_rbuf_at' is never used. [unusedFunction]
+
+^
+src/common/cs_rbuf.c:86:0: style: The function 'cs_rbuf_contig_tail_space' is never used. [unusedFunction]
+
+^
+src/common/cs_varint.c:70:0: style: The function 'cs_varint_decode_unsafe' is never used. [unusedFunction]
+
+^
+src/common/cs_varint.c:20:0: style: The function 'cs_varint_llen' is never used. [unusedFunction]
+
+^
+platforms/esp32/main/esp32_exc.c:40:0: style: The function 'esp32_exception_handler_init' is never used. [unusedFunction]
+
+^
+platforms/esp32/main/esp32_uart.c:615:0: style: The function 'esp32_uart_config_set_fifo' is never used. [unusedFunction]
+
+^
+platforms/esp32/main/esp32_uart.c:589:0: style: The function 'esp32_uart_config_set_pins' is never used. [unusedFunction]
+
+^
+platforms/esp32/main/esp32_uart.c:582:0: style: The function 'esp32_uart_int_mask' is never used. [unusedFunction]
+
+^
+platforms/esp32/main/esp32_uart.c:578:0: style: The function 'esp32_uart_raw_ints' is never used. [unusedFunction]
+
+^
+platforms/esp32c3/main/esp32c3_uart.c:562:0: style: The function 'esp32c3_uart_config_set_fifo' is never used. [unusedFunction]
+
+^
+platforms/esp32c3/main/esp32c3_uart.c:536:0: style: The function 'esp32c3_uart_config_set_pins' is never used. [unusedFunction]
+
+^
+platforms/esp32c3/main/esp32c3_uart.c:529:0: style: The function 'esp32c3_uart_int_mask' is never used. [unusedFunction]
+
+^
+platforms/esp32c3/main/esp32c3_uart.c:525:0: style: The function 'esp32c3_uart_raw_ints' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_periph.c:39:0: style: The function 'esp_chip_type_str' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_coredump.c:83:0: style: The function 'esp_core_dump_init' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_coredump.c:52:0: style: The function 'esp_core_dump_set_flash_area' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_exc.c:76:0: style: The function 'esp_exc_extract_backtrace' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_exc_non_os.c:152:0: style: The function 'esp_exception_handler_init' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_exc.c:207:0: style: The function 'esp_print_reset_info' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_gpio.c:363:0: style: The function 'esp_strapping_to_bootloader' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_uart.c:418:0: style: The function 'esp_uart_config_set_params' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_uart.c:411:0: style: The function 'esp_uart_int_mask' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_uart.c:407:0: style: The function 'esp_uart_raw_ints' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:123:0: style: The function 'esp_umm_init' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:127:0: style: The function 'esp_umm_oom_cb' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/lib/boot.c:68:0: style: The function 'get_inactive_boot_cfg_idx' is never used. [unusedFunction]
+
+^
+platforms/posix/lnx_gpio.c:243:0: style: The function 'gpio_poll' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_hal.c:98:0: style: The function 'inet_ntoa' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32f7_system.c:142:0: style: The function 'inv_dcache' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1467:0: style: The function 'json_asprintf' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1118:0: style: The function 'json_fprintf' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1440:0: style: The function 'json_next_elem' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1433:0: style: The function 'json_next_key' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1348:0: style: The function 'json_prettify_file' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:467:0: style: The function 'json_printer_buf' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:760:0: style: The function 'json_printf_array' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:847:0: style: The function 'json_scanf_array_elem' is never used. [unusedFunction]
+
+^
+src/frozen/frozen.c:1266:0: style: The function 'json_setf' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:279:0: style: The function 'load_config_defaults' is never used. [unusedFunction]
+
+^
+src/common/json_utils.c:31:0: style: The function 'mg_json_printer_mbuf' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_main.c:54:0: style: The function 'mg_lwip_get_poll_delay_ms' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/cc3200_hal.c:55:0: style: The function 'mg_ssl_if_mbed_random' is never used. [unusedFunction]
+
+^
+src/mgos_init.c:46:0: style: The function 'mgos_app_preinit' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:107:0: style: The function 'mgos_bind' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:178:0: style: The function 'mgos_bind_http' is never used. [unusedFunction]
+
+^
+src/mgos_bitbang.c:96:0: style: The function 'mgos_bitbang_write_bits_js' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:150:0: style: The function 'mgos_conf_parse_dev' is never used. [unusedFunction]
+
+^
+src/mgos_config_util.c:243:0: style: The function 'mgos_conf_parse_msg' is never used. [unusedFunction]
+
+^
+src/mgos_config_util.c:543:0: style: The function 'mgos_conf_value_type' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:504:0: style: The function 'mgos_config_apply' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:235:0: style: The function 'mgos_config_bar_baz_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:218:0: style: The function 'mgos_config_bar_inner_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:255:0: style: The function 'mgos_config_bar_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:200:0: style: The function 'mgos_config_baz_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:419:0: style: The function 'mgos_config_boo_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:400:0: style: The function 'mgos_config_boo_sub_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:156:0: style: The function 'mgos_config_debug_empty_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:183:0: style: The function 'mgos_config_debug_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:139:0: style: The function 'mgos_config_http_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:440:0: style: The function 'mgos_config_parse_f' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:346:0: style: The function 'mgos_config_reset' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:290:0: style: The function 'mgos_config_test_bar1_baz_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:273:0: style: The function 'mgos_config_test_bar1_inner_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:345:0: style: The function 'mgos_config_test_bar2_baz_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:328:0: style: The function 'mgos_config_test_bar2_inner_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:365:0: style: The function 'mgos_config_test_bar2_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:383:0: style: The function 'mgos_config_test_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:103:0: style: The function 'mgos_config_wifi_ap_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:121:0: style: The function 'mgos_config_wifi_parse_f' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:82:0: style: The function 'mgos_config_wifi_sta_parse_f' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:185:0: style: The function 'mgos_connect_http' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:193:0: style: The function 'mgos_connect_http_ssl' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_fs.c:21:0: style: The function 'mgos_core_fs_init' is never used. [unusedFunction]
+
+^
+src/mgos_debug.c:247:0: style: The function 'mgos_debug_event_get_len' is never used. [unusedFunction]
+
+^
+src/mgos_debug.c:242:0: style: The function 'mgos_debug_event_get_ptr' is never used. [unusedFunction]
+
+^
+src/mgos_debug.c:219:0: style: The function 'mgos_debug_resume_uart' is never used. [unusedFunction]
+
+^
+src/mgos_debug.c:215:0: style: The function 'mgos_debug_suspend_uart' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:143:0: style: The function 'mgos_disconnect' is never used. [unusedFunction]
+
+^
+src/mgos_dlsym.c:25:0: style: The function 'mgos_dlsym' is never used. [unusedFunction]
+
+^
+src/mgos_event.c:118:0: style: The function 'mgos_event_remove_group_handler' is never used. [unusedFunction]
+
+^
+src/mgos_event.c:113:0: style: The function 'mgos_event_remove_handler' is never used. [unusedFunction]
+
+^
+src/mgos_file_utils.c:127:0: style: The function 'mgos_file_copy_if_different' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_main.c:118:0: style: The function 'mgos_freertos_pre_init' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:234:0: style: The function 'mgos_get_body_ptr' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_hal_system.c:88:0: style: The function 'mgos_get_fs_memory_usage' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:214:0: style: The function 'mgos_get_mbuf_len' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:209:0: style: The function 'mgos_get_mbuf_ptr' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:224:0: style: The function 'mgos_get_mgstr_len' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:219:0: style: The function 'mgos_get_mgstr_ptr' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:229:0: style: The function 'mgos_get_msg_ptr' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:204:0: style: The function 'mgos_get_recv_mbuf' is never used. [unusedFunction]
+
+^
+src/mgos_debug.c:207:0: style: The function 'mgos_get_stdout_uart' is never used. [unusedFunction]
+
+^
+src/mgos_timers.c:169:0: style: The function 'mgos_get_timer_info' is never used. [unusedFunction]
+
+^
+src/mgos_gpio.c:278:0: style: The function 'mgos_gpio_blink' is never used. [unusedFunction]
+
+^
+platforms/posix/lnx_gpio.c:325:0: style: The function 'mgos_gpio_hal_int_clr' is never used. [unusedFunction]
+
+^
+platforms/posix/lnx_gpio.c:159:0: style: The function 'mgos_gpio_hal_int_done' is never used. [unusedFunction]
+
+^
+src/mgos_gpio.c:305:0: style: The function 'mgos_gpio_init' is never used. [unusedFunction]
+
+^
+src/mgos_gpio.c:204:0: style: The function 'mgos_gpio_remove_int_handler' is never used. [unusedFunction]
+
+^
+src/mgos_gpio.c:184:0: style: The function 'mgos_gpio_set_int_handler_isr' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:111:0: style: The function 'mgos_i2c_close' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:61:0: style: The function 'mgos_i2c_create' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_i2c.c:72:0: style: The function 'mgos_i2c_stop' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:238:0: style: The function 'mgos_is_inbound' is never used. [unusedFunction]
+
+^
+src/mgos_system.c:65:0: style: The function 'mgos_itoa' is never used. [unusedFunction]
+
+^
+src/mgos_utils.c:40:0: style: The function 'mgos_log' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:242:0: style: The function 'mgos_mongoose_init' is never used. [unusedFunction]
+
+^
+src/mgos_net.c:212:0: style: The function 'mgos_net_init' is never used. [unusedFunction]
+
+^
+src/mgos_net.c:176:0: style: The function 'mgos_net_str_to_ip_n' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:42:0: style: The function 'mgos_ota_apply_update' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:129:0: style: The function 'mgos_ota_backend_init' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:46:0: style: The function 'mgos_ota_boot_commit' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:32:0: style: The function 'mgos_ota_boot_get_state' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:50:0: style: The function 'mgos_ota_boot_revert' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:37:0: style: The function 'mgos_ota_boot_set_state' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:61:0: style: The function 'mgos_ota_create_snapshot' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ota_backend.c:57:0: style: The function 'mgos_ota_is_first_boot' is never used. [unusedFunction]
+
+^
+src/mgos_utils.c:32:0: style: The function 'mgos_rand_range' is never used. [unusedFunction]
+
+^
+src/mgos_mongoose.c:79:0: style: The function 'mgos_remove_poll_cb' is never used. [unusedFunction]
+
+^
+src/mgos_hw_timers.c:48:0: style: The function 'mgos_set_hw_timer' is never used. [unusedFunction]
+
+^
+src/mgos_time.c:47:0: style: The function 'mgos_settimeofday' is never used. [unusedFunction]
+
+^
+src/mgos_time.c:41:0: style: The function 'mgos_strftime' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:642:0: style: The function 'mgos_sys_config_get' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:360:0: style: The function 'mgos_sys_config_init' is never used. [unusedFunction]
+
+^
+platforms/posix/main.c:56:0: style: The function 'mgos_sys_config_init_platform' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:508:0: style: The function 'mgos_sys_config_parse_sub' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:490:0: style: The function 'mgos_sys_config_register_validator' is never used. [unusedFunction]
+
+^
+src/mgos_sys_config.c:337:0: style: The function 'mgos_sys_config_save' is never used. [unusedFunction]
+
+^
+src/test/data/golden/mgos_config.c:645:0: style: The function 'mgos_sys_config_set' is never used. [unusedFunction]
+
+^
+src/mgos_system.c:57:0: style: The function 'mgos_system_restart_after' is never used. [unusedFunction]
+
+^
+src/mgos_time.c:37:0: style: The function 'mgos_time_micros' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:233:0: style: The function 'mgos_uart_hal_configure' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_uart.c:385:0: style: The function 'mgos_uart_hal_deinit' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:156:0: style: The function 'mgos_uart_hal_dispatch_bottom' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:104:0: style: The function 'mgos_uart_hal_dispatch_rx_top' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:143:0: style: The function 'mgos_uart_hal_dispatch_tx_top' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:199:0: style: The function 'mgos_uart_hal_init' is never used. [unusedFunction]
+
+^
+platforms/posix/main.c:73:0: style: The function 'mgos_uart_hal_set_defaults' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_uart.c:164:0: style: The function 'mgos_uart_hal_set_rx_enabled' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_fs.c:26:0: style: The function 'mgos_vfs_common_init' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_hal.c:51:0: style: The function 'mgos_wdt_disable' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:147:0: style: The function 'ntohl' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:143:0: style: The function 'ntohs' is never used. [unusedFunction]
+
+^
+src/test/test_util.c:90:0: style: The function 'poll_until' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:109:0: style: The function 'pvPortZalloc' is never used. [unusedFunction]
+
+^
+platforms/esp8266/rboot/rboot/appcode/rboot-api.c:67:0: style: The function 'rboot_get_current_rom' is never used. [unusedFunction]
+
+^
+platforms/esp8266/rboot/rboot/appcode/rboot-api.c:74:0: style: The function 'rboot_set_current_rom' is never used. [unusedFunction]
+
+^
+platforms/esp8266/rboot/rboot/appcode/rboot-api.c:95:0: style: The function 'rboot_write_flash' is never used. [unusedFunction]
+
+^
+platforms/esp8266/rboot/rboot/appcode/rboot-api.c:83:0: style: The function 'rboot_write_init' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/rpa_queue.c:88:0: style: The function 'rpa_queue_destroy' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/rpa_queue.c:156:0: style: The function 'rpa_queue_push' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/rpa_queue.c:275:0: style: The function 'rpa_queue_size' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_main.c:49:0: style: The function 'rs14100_enable_icache' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_main.c:251:0: style: The function 'rs14100_wifi_get_band' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_main.c:59:0: style: The function 'rsi_delay_ms' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/network_common.c:63:0: style: The function 'sl_Provisioning_HttpServerEventHdl' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/network_common.c:83:0: style: The function 'sl_Provisioning_NetAppEventHdl' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/network_common.c:101:0: style: The function 'sl_Provisioning_WlanEventHdl' is never used. [unusedFunction]
+
+^
+platforms/posix/posix_hal.c:122:0: style: The function 'stdin_thread' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32f2_system.c:103:0: style: The function 'stm32_flush_caches' is never used. [unusedFunction]
+
+^
+platforms/stm32/src/stm32_gpio.c:230:0: style: The function 'stm32_gpio_set_mode_analog' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_hal.c:72:0: style: The function 'swap_bytes_16' is never used. [unusedFunction]
+
+^
+platforms/rs14100/src/rs14100_hal.c:67:0: style: The function 'swap_bytes_32' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_hal.c:163:0: style: The function 'sys_now' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_exc_non_os.c:128:0: style: The function 'system_restart_local' is never used. [unusedFunction]
+
+^
+platforms/ubuntu/src/ubuntu_ipc_client.c:176:0: style: The function 'ubuntu_ipc_ping' is never used. [unusedFunction]
+
+^
+src/umm_malloc/test/umm_malloc_test.c:39:0: style: The function 'umm_corruption' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_main.c:130:0: style: The function 'umm_oom_cb' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/cc3200_main.c:65:0: style: The function 'vApplicationIdleHook' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/cc3200_main.c:60:0: style: The function 'vApplicationMallocFailedHook' is never used. [unusedFunction]
+
+^
+platforms/cc3200/src/cc3200_main.c:69:0: style: The function 'vApplicationStackOverflowHook' is never used. [unusedFunction]
+
+^
+platforms/cc32xx/src/cc32xx_exc.c:83:0: style: The function 'vAssertCalled' is never used. [unusedFunction]
+
+^
+platforms/cc3200/boot/lib/boot.c:112:0: style: The function 'write_boot_cfg' is never used. [unusedFunction]
+
+^
+platforms/esp8266/src/esp_libc.c:119:0: style: The function 'xPortWantedSizeAlign' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
